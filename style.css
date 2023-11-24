@@ -52,7 +52,7 @@ body {
 
 /* 主要内容样式 */
 .main-content {
-    width: 70%;
+    width: 90%;
     padding: 20px;
     display: flex;
     flex-direction: column;
