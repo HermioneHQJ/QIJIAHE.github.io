@@ -1,78 +1,103 @@
+/* 全局样式 */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
     margin: 0;
     padding: 0;
     color: #333;
-    background-color: #f9f9f9; /* 浅色背景 */
+    background-color: #f4f4f4;
 }
 
 .container {
     display: flex;
+    max-width: 1200px;
+    margin: auto;
+    align-items: flex-start;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: #fff;
 }
 
+/* 侧边栏样式 */
 .sidebar {
-    flex: 0 0 20%; /* 侧边栏占据20%宽度 */
-    background-color: #e8e8e8; /* 浅灰色侧边栏 */
-    color: #333;
+    width: 100%;
     padding: 20px;
-    height: 100vh; /* 使侧边栏高度充满视口 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    background: #333;
+    color: #fff;
+}
+
+.sidebar img.profile-pic {
+    max-width: 150px;
+    border-radius: 50%;
+}
+
+.sidebar h1 {
+    margin: 10px 0;
+    text-align: center
+}
+
+.sidebar p {
+    text-align: center;
 }
 
 .sidebar a {
-    color: #555; /* 深灰色链接 */
+    color: #adadad;
+    text-decoration: none;
+    text-align: center;
 }
 
-.profile-pic {
-    max-width: 100%; /* 图片宽度最大为侧边栏宽度 */
-    height: auto; /* 高度自适应 */
-    border-radius: 50%;
-    border: 2px solid #ccc; /* 浅灰色边框 */
-    display: block;
-    margin-bottom: 20px;
-}
-
+/* 主要内容样式 */
 .main-content {
-    flex-grow: 1;
+    width: 90%;
     padding: 20px;
-    background-color: #ffffff; /* 白色背景 */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
-.education-block, .experience-block, .activity-block {
-    background-color: #ffffff;
-    border: 1px solid #e6e6e6; /* 浅灰色边框 */
-    padding: 10px;
+.main-content h2 {
+    color: #333;
+    border-bottom: 2px solid #4CAF50;
+    padding-bottom: 5px;
+}
+
+.main-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.main-content ul {
+    background: #e7e7e7;
     margin-bottom: 10px;
+    padding: 10px;
     border-radius: 5px;
 }
 
-h2 {
-    color: #666; /* 深灰色标题 */
-    margin-bottom: 15px;
+/* 区块样式 */
+.education-block, .experience-block {
+    background: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    overflow: auto;
+    box-sizing: border-box;
 }
 
-h3 {
-    font-size: 18px;
-    color: #444; /* 中灰色小标题 */
-}
-
-p, li {
-    font-size: 14px;
-    color: #333; /* 深灰色正文 */
-}
-
-.uni-logo {
-    max-width: 100%; /* logo宽度最大为包含块宽度 */
-    height: auto; /* 高度自适应 */
-    display: block;
-    margin-bottom: 10px;
-}
-
+/* 页脚样式 */
 footer {
     text-align: center;
     padding: 10px 0;
-    background-color: #e8e8e8; /* 浅灰色底部栏 */
-    color: #333;
-    position: fixed;
+    background: #333;
+    color: #fff;
+    position: relative;
     bottom: 0;
     width: 100%;
+}
+
+footer p {
+    margin: 0;
 }
